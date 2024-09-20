@@ -18,28 +18,28 @@ export default function CalendarHeader() {
     );
   }
   return (
-    <header className="px-5 py-6 flex items-center">
-      <img src={logo} alt="calendar" className="mr-5 w-35 h-15" />
-      <h1 className="mr-20 text-xl text-blue-500 fond-bold">
+    <header className="px-5 py-6 flex justify-around items-center gap-4">
+      <img src={logo} alt="calendar" className="w-10 h-10" />
+      <h1 className=" text-xl text-blue-500 fond-bold">
         Calendar
       </h1>
       <button
         onClick={handleReset}
-        className="border square py-6 px-6 mr-20"
+        className="border square py-6 px-6"
       >
         Today
       </button>
       <button onClick={handlePrevMonth}>
-        <span className="material-icons-outlined cursor-pointer text-blue-600 mx-5">
+        <span className="material-icons-outlined cursor-pointer text-blue-600">
           chevron_left
         </span>
       </button>
       <button onClick={handleNextMonth}>
-        <span className="material-icons-outlined cursor-pointer text-blue-600 mx-5">
+        <span className="material-icons-outlined cursor-pointer text-blue-600">
           chevron_right
         </span>
       </button>
-      <h2 className="ml-4 text-xl text-gray-500 font-bold">
+      <h2 className="hidden md:ml-4 md:text-xl md:text-gray-500 md:font-bold">
         {dayjs(new Date(dayjs().year(), monthIndex)).format(
           "MMMM YYYY"
         )}

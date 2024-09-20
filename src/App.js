@@ -18,9 +18,11 @@ function App() {
     <React.Fragment>
       {showEventModal && <EventModal />}
 
-      <div className="h-screen flex flex-col">
+      <div className="">
         <CalendarHeader />
-        <div className="flex flex-1">
+      </div>
+      <div>
+        <div className="flex justify-center m-auto">
           <Sidebar />
           <Month month={currenMonth} />
         </div>
