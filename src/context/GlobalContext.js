@@ -1,4 +1,5 @@
 import React from "react";
+// const { monthIndex, setMonthIndex, daySelected, setDaySelected, savedEvents } = useContext(GlobalContext);
 
 const GlobalContext = React.createContext({
   monthIndex: 0,

@@ -39,6 +39,7 @@ export default function ContextWrapper(props) {
     [],
     initEvents
   );
+  const [searchQuery, setSearchQuery] = useState(""); // Add this state for search
 
   const filteredEvents = useMemo(() => {
     return savedEvents.filter((evt) =>
@@ -87,6 +88,10 @@ export default function ContextWrapper(props) {
     );
   }
 
+  function searchEvents(query) {
+    setSearchQuery(query);
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -106,6 +111,8 @@ export default function ContextWrapper(props) {
         labels,
         updateLabel,
         filteredEvents,
+        searchQuery, // Add this
+        searchEvents, // Add this
       }}
     >
       {props.children}
