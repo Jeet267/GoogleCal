@@ -57,13 +57,13 @@ export default function CalendarHeader({setViewState}) {
         </h2>
       </div>
 
-      <div className="mt-3 sm:text-sm flex items-center space-x-0.5 ml-2">
-        <button
+      <div className="flex items-center space-x-3 sm:space-x-4 lg:space-x-6 mt-3 sm:mt-0"> {/* Flex container for proper spacing */}
+        <span
+          className="material-icons-outlined cursor-pointer text-white-600"
           onClick={() => setIsSettingsOpen(true)} // Open settings modal
-          className="border rounded py-1 px-1 sm:py-0.5 sm:px-2 text-sm sm:text-base"
         >
-          Settings
-        </button>
+          settings
+        </span>
         <select
         value={viewType}
         onChange={handleViewChange}
